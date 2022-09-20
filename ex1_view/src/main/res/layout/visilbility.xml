@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <!--visibility 속성 : 기본값(visible)-->
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="btn1"
+    android:visibility="visible"/>
+    <!--visibility 속성 : invisible
+    화면에 출력은 안 되지만, 공간은 차지-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn2"
+        android:visibility="invisible"/>
+    <!--visibility 속성 : gone
+    화면에도 안 보이고  되지만, 공간도 차지 하지 않는다.-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn3"
+        android:visibility="gone"/>
+    <!--visibility 속성 : -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn4"/>
+</LinearLayout>

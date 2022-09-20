@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 텍스트  뷰의 다양한 속성  colors.xml strings.xml-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello"
+        android:textColor="@color/myColor"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+    <!--auto link : 문자열에 맞는 링크 추가-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="http://www.naver.com"
+        android:textSize="50sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="phone"
+        android:text="010-000-0000"
+        android:textSize="50sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/koreaSong"
+        android:textSize="50sp"
+        android:maxLines="3"/>
+
+    <!--경계선 표시할 때 유용한 view태그-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"/>
+
+    <!--뒤쪽으로 가사가 ...더 있다.-->
+    <!--singleLine + ellipsize-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/koreaSong"
+        android:textSize="40sp"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+</LinearLayout>

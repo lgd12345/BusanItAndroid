@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <!--배지 규칙-->
+    <!--orientation속성 이용해 배지방향 설정
+    vertical -> 수직 위에서 아래로
+    horizontal -> 수평 왼쪽에서 오른쪽으로 -->
+
+    <!--여백을 채우는 layout_weight 속성-->
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn"
+        android:layout_weight="4"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn"
+        android:layout_weight="1"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn"
+        android:layout_weight="1"/>-->
+
+    <!--중첩된 레이아웃에서 여백 채우기-->
+ <!--   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="btn1"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="btn2"
+            android:layout_weight="1"/>
+</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn3"
+        android:layout_weight="1"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn4"/>-->
+
+    <!--여백크기로 뷰의 크기 설정-->
+ <!--   <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="btn1"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="btn2"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="btn3"/>-->
+    <!--gravity, layout_gravity 속성-->
+    <!--gravity : 콘텐츠(내용)를 정렬-->
+    <!--layout_gravity: 해당 뷰 자체를 정렬-->
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="btn1"
+        android:textSize="30sp"
+        android:gravity="top|center"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="btn2"
+        android:textSize="30sp"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>

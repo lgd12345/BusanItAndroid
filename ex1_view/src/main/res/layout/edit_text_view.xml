@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--EditText : 글자를 입력 할 수 있는 뷰-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--input Type 속성 : 글을 입력할 때 키보드를 지정가능-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="전화번호 입력"/>
+    <!--maxLines : 처음에는 한줄로 입력되다가,
+    지정한 줄의 수 만큼 늘어남-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:hint="maxLine 테스트"/>
+    <!--lines : 처음부터 지정한 줄의 수 만큼 출력한다.-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="3"
+        android:hint="lines 테스트"/>
+
+
+</LinearLayout>
