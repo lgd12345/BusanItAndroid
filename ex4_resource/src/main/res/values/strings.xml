@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ex4_resource</string>
+    <string name="intro_main">Find your phone contacts on Messenger</string>
+    <string name="intro_detail">
+continously uploading your contacts helps Facebook and
+Messenger suggest connections
+</string>
+    <string name="intro_more">Lean More</string>
+    <string name="intro_button">TRUN ON</string>
+    <string name="intro_delay">NOT NOW</string>
+</resources>
