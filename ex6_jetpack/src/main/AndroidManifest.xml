@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BusanItAndroid">
+        <!--상단 뒤로 가기 버튼 방법 1 -->
+        <!--매니페스트 파일에서 업버튼 생성 방법
+        activity 태그에 android:parentActivityName=".MainActivity"> 이동할 부모 acivity설정해줌-->
+        <!--<activity
+            android:name=".TwoActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>-->
+        <activity
+            android:name=".TwoActivity"
+            android:exported="false">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+    </application>
+
+</manifest>

@@ -6,6 +6,9 @@ import android.app.Dialog
 import android.app.TimePickerDialog
 import android.content.DialogInterface
 import android.content.pm.PackageManager
+import android.media.MediaPlayer
+import android.media.RingtoneManager
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -168,6 +171,16 @@ class MainActivity : AppCompatActivity() {
                 show()
             }
         }
-
+        //소리 얻기
+        val notification : Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+        val ringtone = RingtoneManager.getRingtone(applicationContext,notification)
+        binding.soundBtn.setOnClickListener {
+            ringtone.play()
+        }
+        //음원 재생
+        val player : MediaPlayer = MediaPlayer.create(this,R.raw.mario)
+        binding.sound2Btn.setOnClickListener {
+            player.start()
+        }
     }
 }
