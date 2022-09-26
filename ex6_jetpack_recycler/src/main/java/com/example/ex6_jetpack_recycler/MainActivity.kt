@@ -2,6 +2,9 @@ package com.example.ex6_jetpack_recycler
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,6 +13,8 @@ import com.example.ex6_jetpack_recycler.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var adapter: MyAdapter
+    lateinit var toggle: ActionBarDrawerToggle
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
@@ -83,5 +88,20 @@ class MainActivity : AppCompatActivity() {
         //       binding.removeItem.setOnClickListener {
         //          adapter.removeItem3()
         //      }
+
+        //drawer 메뉴 토글 버튼 적용
+        toggle = ActionBarDrawerToggle(this,binding.drawer,R.string.open, R.string.close)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toggle.syncState()
+
+    }
+    //메뉴에서 항목 선택시 이벤트
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)){
+            Log.d("myLog","토글 버튼 이벤트")
+            return true
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

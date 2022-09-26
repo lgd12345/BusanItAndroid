@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, TwoActivity::class.java)
             startActivity(intent)
         }
-        //프래그먼트를 정용(제어)
+        //프래그먼트를 적용(제어)
         val fragmentManager: FragmentManager = supportFragmentManager
         val transaction: FragmentTransaction = fragmentManager.beginTransaction()
         val fragment = OneFragment()
