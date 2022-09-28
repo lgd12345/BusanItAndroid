@@ -12,6 +12,9 @@ class TwoActivity : AppCompatActivity() {
         val binding = ActivityTwoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //이런식의 사용을 ex) 카카오톡 프로필 사진 등록시 편집화면에서 사진 앨범에 접속했다가 다시
+        // 편집화면에 돌아와서 등록하는 경우가 있는데 그럴 때 쓰이게 된다.
+
         //엑스트라 데이터 받기
         val intent = intent
         val exData1 = intent.getStringExtra("data1")
