@@ -8,16 +8,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusanItAndroid">
+        <!--소프트 키보드 올라올 때 화면조정 : windowSoftInputMode-->
         <activity
             android:name=".TwoActivity"
-            android:exported="false">
+            android:exported="false"
+            android:windowSoftInputMode="adjustUnspecified">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <!--어플리케이션 처음 켤 때 처음부터 가로모드로 적용-->
+        <!--android:screenOrientation="landscape"-->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

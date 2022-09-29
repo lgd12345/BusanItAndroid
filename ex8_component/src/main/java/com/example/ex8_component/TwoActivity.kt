@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import com.example.ex8_component.databinding.ActivityTwoBinding
 
 class TwoActivity : AppCompatActivity() {
@@ -31,6 +32,15 @@ class TwoActivity : AppCompatActivity() {
             setResult(RESULT_OK,intent)
             finish()
         }
-
+//        키보드 올리고 내리기
+        val manager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        binding.showBtn.setOnClickListener{
+            //포커스는 커서 깜빡거리기
+            binding.editView.requestFocus()
+            manager.showSoftInput(binding.editView, InputMethodManager.SHOW_IMPLICIT)
+        }
+        binding.hideBtn.setOnClickListener {
+            manager.hideSoftInputFromWindow(currentFocus?.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
+        }
     }
 }

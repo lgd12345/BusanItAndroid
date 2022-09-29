@@ -4,13 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+    <!--인텐트 테스트 -->
+        <Button
+            android:id="@+id/goTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="두번" />
 
-    <Button
-        android:id="@+id/goTwo"
+    <!--액티비티 생명주기에서 상태값 저장-->
+    <TextView
+        android:id="@+id/ctnText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="두번" />
+        android:layout_gravity="center"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/cntBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="count" />
 
 </LinearLayout>

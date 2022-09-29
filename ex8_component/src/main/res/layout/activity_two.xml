@@ -13,4 +13,40 @@
         android:layout_height="wrap_content"
         android:text="홈" />
 
+    <!--키보드 올라가게-->
+    <Button
+        android:id="@+id/showBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show btn" />
+    <!--키보드 내려가게-->
+    <Button
+        android:id="@+id/hideBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hide btn" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#5F40E8"
+        android:text="text1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#8BC34A"
+        android:text="text2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#03A9F4"
+        android:text="text3" />
+    <!--text입력창-->
+    <EditText
+        android:id="@+id/editView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

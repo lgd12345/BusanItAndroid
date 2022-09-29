@@ -10,6 +10,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.example.ex8_component.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    var cnt = 0
+
     //액티비티가 종료 비활성화 될 때
     override fun onDestroy() {
         Log.d("myLog", "onDestroy")
@@ -77,8 +79,22 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("data1","데이터 돌려받기")
             intent.putExtra("data2",1)
             requestLauncher.launch(intent)
-
         }
+
+        //액티비티 상태값 유지
+        val data = savedInstanceState?.getInt("cnt")
+        if(data != null){
+            cnt = data
+            binding.ctnText.text = cnt.toString()
+        }
+        Log.d("myLog","cnt 값 확인 : ${cnt}")
+
+        //액티비티 상태값
+        binding.cntBtn.setOnClickListener{
+            cnt += 1
+            binding.ctnText.text = cnt.toString()
+        }
+
     }
     //데이터를 다시 돌려 받을 때
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -87,5 +103,19 @@ class MainActivity : AppCompatActivity() {
             val result = data?.getStringExtra("result")
             Log.d("myLog","데이터 돌려 받기 1 : ${result}")
         }
+    }
+
+//가로모드에서도 계속해서 적용시킨다.
+// 하지만 이걸로는 저장된 값이 가로모드로 돌렸을 때 바로 보여지지 않음. 위에서 (유지) 지정해줌
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        //번들 객체에 저장된 데이터 가져오기
+        cnt = savedInstanceState.getInt("cnt")
+        Log.d("myLog","번들 객체에 저장된 데이터 : ${cnt}")
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        //번들 객체에 데이터 저장
+        outState.putInt("cnt",cnt)
     }
 }
