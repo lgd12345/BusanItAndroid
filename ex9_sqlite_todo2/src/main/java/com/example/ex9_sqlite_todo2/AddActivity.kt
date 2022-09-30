@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.example.ex9_sqlite_todo2.databinding.ActivityAddBinding
 
 class AddActivity : AppCompatActivity() {
@@ -26,7 +27,6 @@ class AddActivity : AppCompatActivity() {
 //할일 등록 화면에서 저장버튼 클릭시 실행
             R.id.menu_add_save -> {
                 val inputData = binding.addEditView.text.toString()
-                val db = DBHelper(this).writableDatabase
                 val intent = intent
                 var todoText = binding.addEditView.text.toString()
 
@@ -34,10 +34,12 @@ class AddActivity : AppCompatActivity() {
 //할일 입력값이 없을떄
                     //RESULT_CANCELED 작업 취소
                     //비워진채로 intent 넘어감
+                    Toast.makeText(this.getApplicationContext(),"문자를 입력해주세요", Toast.LENGTH_SHORT).show()
                     setResult(Activity.RESULT_CANCELED, intent)
                 }else{
 //할일 입력값이 있을떄
                     //RESULT_OK 작업 성공
+                    val db = DBHelper(this).writableDatabase
                     db.execSQL(
                         "insert into TODO_TB (todo) values (?)",
                         arrayOf<String>(inputData)

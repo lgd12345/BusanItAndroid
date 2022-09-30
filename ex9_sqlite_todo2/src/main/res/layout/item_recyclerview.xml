@@ -20,4 +20,19 @@
         android:layout_weight="1"
         android:textSize="16dp"
         android:textStyle="bold" />
+    <!--수정은 아이템 클릭하면 나오도록-->
+    <Button
+        android:id="@+id/update_btn"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="수정"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_marginLeft="5dp"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="삭제"
+        android:textSize="15sp"/>
 </LinearLayout>
