@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                 .load("https://reqres.in/img/faces/1-image.jpg")
                 .override(400,400)//크기조절
                 .placeholder(R.mipmap.ic_launcher_round)//이미지 로딩을 시작하기전에 보여줄 이미지
-                .error(R.drawable.a789)//리소스를 불러오다가 에러가 발생했을 때 보여줄 이미지 일부러 주소 다르게 오류("https://reqres.in/img/faces/1image.jpg")
+                .error(R.mipmap.ic_launcher_round)//리소스를 불러오다가 에러가 발생했을 때 보여줄 이미지 일부러 주소 다르게 오류("https://reqres.in/img/faces/1image.jpg")
                 .into(binding.glideImage)
         }
 
